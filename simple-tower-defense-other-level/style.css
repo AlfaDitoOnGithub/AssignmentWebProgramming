@@ -9,7 +9,9 @@
 }
 
 .turret {
-  background-color: #C0C0C0;
+  background-image: url('AssignmentWebProgramming\simple-tower-defense-other-level\assets\20743083_50ct_wike_210722.jpg') no-repeat center center;
+  /* background-color: #C0C0C0; */
+  background-size: cover;
   opacity: 0.7;
   border: 2px solid #000000;
   position: absolute;
@@ -76,7 +78,9 @@
 }
 
 .minion {
-  background-color: #000000;
+  background-image: url('AssignmentWebProgramming\simple-tower-defense-other-level\assets\this-side-view-new-bulldozer-260nw-3057466 (1).jpg') no-repeat center center;
+  background-size: cover;
+  /* background-color: #000000; */
   position: absolute;
   width: 15px;
   height: 15px;
