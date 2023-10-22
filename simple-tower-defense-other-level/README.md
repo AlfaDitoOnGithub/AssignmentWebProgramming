@@ -10,8 +10,10 @@ testing out using html+css with Javascript
 default akan diarahkan ke index.html, yang merupakan halaman login, jika sudah login maka akan bisa ke game.html
 game berada di game.html, code untuk melakukan up score sudah ada di api.js, dan juga included di game.js, tetapi ketika game over, tampilan game over tidak muncul. mungkin harus dibuat pada page yang berbeda.
 
-untuk akses test bisa di ![https://alfaditoongithub.github.io/AssignmentWebProgramming/simple-tower-defense-other-level/index.html](link ini - login)
-dan juga ![https://alfaditoongithub.github.io/AssignmentWebProgramming/simple-tower-defense-other-level/game.html](link ini-langsung game)
+untuk akses test bisa di 
+![https://alfaditoongithub.github.io/AssignmentWebProgramming/simple-tower-defense-other-level/index.html](link ini - login)
+dan juga 
+![https://alfaditoongithub.github.io/AssignmentWebProgramming/simple-tower-defense-other-level/game.html](link ini-langsung game)
 
 untuk api
 alfaditoauliadenova@gmail.com - email
