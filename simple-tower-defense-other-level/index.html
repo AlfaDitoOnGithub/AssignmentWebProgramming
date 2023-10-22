@@ -3,19 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tower Defense</title>
-    <script type="text/javascript" src="script.js"></script>
-    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>LOGIN DULU BANG</title>
+    <script type="text/javascript" src="api.js"></script>
 </head>
 <body>
-     <!-- End Screen -->
-     <div id="end-screen" style="display: none;">
-        <h1>Game Over</h1>
-        <p>Your Score: <span id="final-score">0</span></p>
-        <input type="text" id="player-name" placeholder="Enter your name">
-        <button id="submit-score">Submit Score</button>
-      </div>
+    <div id="opening">
+        <h1>PEMBUKA</h1>
+        <h3>Selamat Datang di Game Tower Defense Sederhana dengan menggunakan </h2>
+        <h3>HTML, CSS, dan JavaScript saja.</h2>
+        <h3>Masih banyak yang perlu diperbaiki dan diberi kesempurnaan.</h2>
+        <h4>mohon maklum</h2>
+    </div>
+<div id="login-container">
+    <!-- Login Form -->
+<form id="login-form">
+    <h2>Login</h2>
+    <input type="email" id="login-email" placeholder="Email">
+    <input type="password" id="login-password" placeholder="Password">
+    <button type="submit">Login</button>
+</form>
+
+<!-- Registration Form -->
+<form id="registration-form">
+    <h2>Registration</h2>
+    <label for="real-name">Real Name:</label>
+    <input type="text" id="register-name" name="register-name" required>
+  
+    <label for="email">Email:</label>
+    <input type="email" id="register-email" name="register-email" required>
+  
+    <label for="password">Password:</label>
+    <input type="password" id="register-password" name="register-password" required>
+    <span id="password-validation"></span>
+  
+    
+    <button type="submit">Register</button>
+  </form>              
+</div>
+
     
 </body>
-</html>     
-        
+</html>

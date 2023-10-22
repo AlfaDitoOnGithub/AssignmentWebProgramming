@@ -339,14 +339,52 @@ function drawMap() {
   }
   /////////////////////// END MAP CREATION
 
+  // Submit Score Function
+function submitScore(playerName, playerScore) {
+  const data = {
+    nama: playerName,
+    score: playerScore,
+  };
+
+  fetch('https://ets-pemrograman-web-f.cyclic.app/scores/score', {  // Update the API endpoint
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  })
+    .then((response) => {
+      if (response.ok) {
+        console.log('Score submitted successfully.');
+      } else {
+        console.error('Score submission failed.');
+      }
+    })
+    .catch((error) => {
+      console.error('Error: ' + error);
+    });
+}
+
+
   // ENDSCREEN
   function showEndScreen(score) {
     const endScreen = document.getElementById("end-screen");
     const finalScore = document.getElementById("final-score");
     finalScore.textContent = score;
     endScreen.style.display = "block";
+  
+    // Assuming you have an input field with id "player-name" for player name
+    const playerNameInput = document.getElementById("player-name");
+  
+    // Assuming you have a button with id "submit-score"
+    const submitButton = document.getElementById("submit-score");
+  
+    // Add a click event listener to the submit button
+    submitButton.addEventListener("click", () => {
+      const playerName = playerNameInput.value;
+      submitScore(playerName, score); // Call the submitScore function
+    });
   }
-
 
 //////////////////////// WAVE HANDLING
 function startwave(evt) {
