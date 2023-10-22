@@ -42,6 +42,20 @@ function turretColor(turretID) {
       return "#FF0000";
   }
 }
+function turretImage(turretID) {
+  switch (turretID) {
+    case "turret0":
+      return "url('AssignmentWebProgramming/simple-tower-defense-other-level/assets/20743083_50ct_wike_210722.jpg') no-repeat center center;";
+    case "turret1":
+      return "url('AssignmentWebProgramming/simple-tower-defense-other-level/assets/20743083_50ct_wike_210722.jpg') no-repeat center center;";
+    case "turret2":
+      return "url('AssignmentWebProgramming/simple-tower-defense-other-level/assets/20743083_50ct_wike_210722.jpg') no-repeat center center;";
+    case "turret3":
+      return "url('AssignmentWebProgramming/simple-tower-defense-other-level/assets/20743083_50ct_wike_210722.jpg') no-repeat center center;";
+    case "turret4":
+      return "url('AssignmentWebProgramming/simple-tower-defense-other-level/assets/20743083_50ct_wike_210722.jpg') no-repeat center center;";
+  }
+}
 
 function turretValue(turretID) {
   switch (turretID) {
@@ -129,6 +143,7 @@ function turretClick(turret) {
       turretD.style.left = x + "px";
       turretD.style.top = y + "px";
       turretD.style.backgroundColor = turretColor(turret.id);
+      turretD.style.backgroundImage = turretImage(turret.id);
       turretD.setAttribute("draggable", "true");
       listenEvent(turretD, "dragstart", turretDrag(turretD));
       document.body.appendChild(turretD);
@@ -324,6 +339,15 @@ function drawMap() {
   }
   /////////////////////// END MAP CREATION
 
+  // ENDSCREEN
+  function showEndScreen(score) {
+    const endScreen = document.getElementById("end-screen");
+    const finalScore = document.getElementById("final-score");
+    finalScore.textContent = score;
+    endScreen.style.display = "block";
+  }
+
+
 //////////////////////// WAVE HANDLING
 function startwave(evt) {
   if (isRunning) return;
@@ -459,6 +483,7 @@ function startwave(evt) {
         if (currentLives == 0) {
           var lives = document.getElementById("lives");
           lives.innerHTML = "Game Over";
+          showEndScreen(currentScore);
           resetwave(null);
         }
         // reset for the next wave!
@@ -609,6 +634,39 @@ function minionreward() {
     return Math.pow(currentWave + 2, 2);
   }
   ////////////////////////// END WAVE HANDLING
+  
+
+  ////////////////////////// API HANDlING
+  
+  ///////SUBMIT END
+const submitButton = document.getElementById("submit-score");
+submitButton.addEventListener("click", () => {
+  const playerName = document.getElementById("player-name").value;
+  const playerScore = document.getElementById("final-score").textContent;
+
+  const data = {
+    name: playerName,
+    score: playerScore,
+  };
+  
+  fetch("your-api-endpoint", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  })
+    .then((response) => {
+      if (response.ok) {
+        console.log("Score submitted successfully.");
+      } else {
+        console.error("Score submission failed.");
+      }
+    })
+    .catch((error) => {
+      console.error("Error: " + error);
+    });
+ });
 
 window.onload = function() {
   drawMap();

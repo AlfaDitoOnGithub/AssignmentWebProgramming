@@ -1,3 +1,19 @@
+/* #game-container {
+  /* position: absolute;
+  top: 0px;
+  left: 0px; 
+  width: 70%;
+  float: left;
+}
+#login-container {
+  /* position: absolute;
+  top: 100px;
+  left: 500px; 
+  width: 30%;
+  float: left;
+} */
+
+
 .mapzone {
   background-color: #228B22;
   position: absolute;
@@ -9,9 +25,10 @@
 }
 
 .turret {
-  background-image: url('AssignmentWebProgramming\simple-tower-defense-other-level\assets\20743083_50ct_wike_210722.jpg') no-repeat center center;
+  background-image: url('assets/20743083_50ct_wike_210722.jpg') no-repeat center center;
   /* background-color: #C0C0C0; */
-  background-size: cover;
+  /* apparently it doesn't work */
+  background-size: 15px 15px;
   opacity: 0.7;
   border: 2px solid #000000;
   position: absolute;
@@ -78,8 +95,8 @@
 }
 
 .minion {
-  background-image: url('AssignmentWebProgramming\simple-tower-defense-other-level\assets\this-side-view-new-bulldozer-260nw-3057466 (1).jpg') no-repeat center center;
-  background-size: cover;
+  background-image: url('../simple-tower-defense-other-level/assets/Buldozer.jpg') no-repeat center center;
+  background-size: 15px 15px;
   /* background-color: #000000; */
   position: absolute;
   width: 15px;
