@@ -634,40 +634,6 @@ function minionreward() {
     return Math.pow(currentWave + 2, 2);
   }
   ////////////////////////// END WAVE HANDLING
-  
-
-  ////////////////////////// API HANDlING
-  
-  ///////SUBMIT END
-const submitButton = document.getElementById("submit-score");
-submitButton.addEventListener("click", () => {
-  const playerName = document.getElementById("player-name").value;
-  const playerScore = document.getElementById("final-score").textContent;
-
-  const data = {
-    name: playerName,
-    score: playerScore,
-  };
-  
-  fetch("your-api-endpoint", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(data),
-  })
-    .then((response) => {
-      if (response.ok) {
-        console.log("Score submitted successfully.");
-      } else {
-        console.error("Score submission failed.");
-      }
-    })
-    .catch((error) => {
-      console.error("Error: " + error);
-    });
- });
-
 window.onload = function() {
   drawMap();
 }
