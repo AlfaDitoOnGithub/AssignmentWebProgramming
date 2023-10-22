@@ -1,24 +1,21 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Tower Defense</title>
-<script type="text/javascript" src="script.js"></script>
-<link rel="stylesheet" href="style.css" type="text/css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tower Defense</title>
+    <script type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" href="style.css" type="text/css">
 </head>
-    <body>
-        <div id="game-container">
-           
-        </div>      
+<body>
+     <!-- End Screen -->
+     <div id="end-screen" style="display: none;">
+        <h1>Game Over</h1>
+        <p>Your Score: <span id="final-score">0</span></p>
+        <input type="text" id="player-name" placeholder="Enter your name">
+        <button id="submit-score">Submit Score</button>
+      </div>
+    
+</body>
+</html>     
         
-        <!-- help -->
-        <div id="help-screen">
-        </div>
-  
-        <!-- End Screen -->
-        <div id="end-screen" style="display: none;">
-            <h1>Game Over</h1>
-            <p>Your Score: <span id="final-score">0</span></p>
-            <input type="text" id="player-name" placeholder="Enter your name">
-            <button id="submit-score">Submit Score</button>
-          </div>
-    </body>
-</html>
